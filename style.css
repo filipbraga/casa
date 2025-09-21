@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'RockTwo';
-  src: url('Fontes/roca-two-thin.ttf') format('truetype'); /* conserva ttf como fallback */
+  src: url('roca-two-thin.ttf') format('truetype'); /* conserva ttf como fallback */
   font-weight: normal;
   font-style: normal;
   font-display: swap;
