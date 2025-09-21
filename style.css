@@ -6,16 +6,18 @@
 
 @font-face {
   font-family: 'RockTwo';
-  src: url('Fontes/roca-two-regular.ttf') format('truetype');
+  src: url('Fontes/roca-two-thin.ttf') format('truetype'); /* conserva ttf como fallback */
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
+
 
 
 body, html {
   font-family: 'RockTwo', serif;
   height: 100%;
-  color: #fff;
+  color: #626C4A;
 }
 
 /* Navbar */
@@ -65,8 +67,13 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* alinha no topo */
-  padding-top: 120px; /* espaço para a navbar fixa */
+  padding-top: 160px; /* espaço para a navbar fixa */
   text-align: center;
+  height: 800px; /* ou o valor que preserve bem a imagem */
+  background-size: cover;
+  background-position: center top;
+
+
 }
 
 .hero-text {
@@ -76,24 +83,20 @@ nav ul li a:hover {
   padding: 0 20px;
 }
 
-.hero-text .save-date {
-  font-size: 20px;
-  color: #0c0a0a;
-  margin-bottom: 0px;
-  font-style: italic;
-}
+
 
 .hero-text h1 {
+ 
   font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #0c0a0a;
+  font-weight: 100;
+  color: #626C4A;
 }
+
 
 .hero-text .date {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #0c0a0a;
+  color: #626C4A;
 }
 
 
