@@ -137,6 +137,7 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
+
 /* Responsivo para tablets */
 @media (max-width: 1024px) {
   .hero {
@@ -162,7 +163,7 @@ nav ul li a:hover {
 }
 
 /* Responsivo para celulares */
-@media (max-width: 1080px ) (max-height: 1920px) {
+@media (max-width: 1080px) and (max-height: 1920px) {
   .hero {
     padding-top: 80px;
   }
@@ -180,3 +181,4 @@ nav ul li a:hover {
     height: 60px;
   }
 }
+
