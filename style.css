@@ -18,6 +18,8 @@ body, html {
   font-family: 'RockTwo', serif;
   height: 100%;
   color: #626C4A;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navbar */
@@ -60,16 +62,15 @@ nav ul li a:hover {
 /* Hero */
 .hero {
   min-height: 100vh;
-  background: url('img1.jpg') no-repeat center center;
+  background: url('img1.jpg') no-repeat center top;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* alinha no topo */
-  padding-top: 160px; /* espaço para a navbar fixa */
+  padding-top: 120px; /* espaço para a navbar fixa */
   text-align: center;
-  height: 800px; /* ou o valor que preserve bem a imagem */
   background-size: cover;
   background-position: center top;
 
@@ -86,7 +87,7 @@ nav ul li a:hover {
   flex-direction: column;   /* empilha os itens */
   align-items: center;      /* centraliza no eixo horizontal */
   text-align: center;       /* garante centralização do texto */
-  gap: -5px;                /* espaço entre os elementos */
+  gap: 5px;                /* espaço entre os elementos */
 }
 
 
@@ -156,4 +157,18 @@ nav ul li a:hover {
   width: 100%;
 }
 
+.hero {
+    background-position: center top;
+    background-attachment: scroll;
+    padding-top: 100px;
+  }
 
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text .date {
+    font-size: 16px;
+  }
+}
