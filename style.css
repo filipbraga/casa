@@ -171,4 +171,27 @@ nav ul li a:hover {
   .hero-text .date {
     font-size: 16px;
   }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text .date {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding-top: 100px;
+    background-position: center top;
+    background-attachment: scroll; /* evita bug em tablets */
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
 }
