@@ -117,26 +117,37 @@ nav ul li a:hover {
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll; /* evita bug em celulares */
-    background-position: center top;
-  }
-
-  .hero-text h1 {
-    font-size: 28px;
-  }
-
-  .hero-text .save-date {
-    font-size: 16px;
-  }
-
-  .hero-text .date {
-    font-size: 14px;
-  }
-
-  .hero-text .versiculo {
-    font-size: 12px;
-  }
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
+.nav-menu ul {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-menu.active ul {
+    display: flex;
+  }
+}
