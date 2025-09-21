@@ -80,7 +80,7 @@ nav ul li a:hover {
     position: absolute;
     top: 60px;
     right: 20px;
-    background: rgba(0, 0, 0, 0.95);
+    background: #626C4A;
     padding: 20px;
     border-radius: 8px;
     display: none;
@@ -101,20 +101,23 @@ nav ul li a:hover {
 /* Hero */
 
 .hero {
-  min-height: 100vh;
-  background: url('hero.jpg') no-repeat center top;
-  background-size: cover;
-  background-attachment: scroll;
-  display: block; /* trocado de flex para block */
-  padding-top: 140px; /* espaço para a navbar */
-  text-align: center;
-  position: relative;
+  min-height: 100vh; /* ocupa toda a altura da tela */
+  background-image: url('hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* cobre toda a área mantendo proporção */
+  background-position: center top; /* centraliza horizontalmente, alinha no topo */
+  background-attachment: scroll; /* evita bugs em mobile */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* posiciona conteúdo no topo */
+  padding-top: 120px; /* espaço para a navbar fixa */
 }
+
 
 /* Texto no topo */
 .hero-text {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 80px auto 0 auto; /* desce os textos 60px abaixo do topo */
   padding: 0 20px;
   text-align: center;
 }
@@ -124,11 +127,11 @@ nav ul li a:hover {
   font-size: 40px;
   font-weight: 100;
   color: #626C4A;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
 }
 
 .hero-text h2 {
-  margin-top: -10px;
+  margin-top: -23px;
 }
 
 .hero-text .date {
@@ -165,6 +168,7 @@ nav ul li a:hover {
 /* Responsivo para celulares */
 @media (max-width: 1080px) and (max-height: 1920px) {
   .hero {
+    min-height: 100dvh;
     padding-top: 80px;
   }
 
