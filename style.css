@@ -119,16 +119,11 @@ nav ul li a:hover {
 /* Responsivo */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 28px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
-}
-
-.nav-menu ul {
-  display: flex;
-  gap: 20px;
 }
 
 @media (max-width: 768px) {
@@ -140,8 +135,8 @@ nav ul li a:hover {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 50px;
-    background: rgba(0, 0, 0, 0.9);
+    right: 20px;
+    background: rgba(0, 0, 0, 0.95);
     padding: 20px;
     border-radius: 8px;
     display: none;
@@ -151,3 +146,12 @@ nav ul li a:hover {
     display: flex;
   }
 }
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
