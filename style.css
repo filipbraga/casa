@@ -186,3 +186,75 @@ nav ul li a:hover {
   }
 }
 
+
+
+
+
+.evento-romantico {
+  background-color: #fff;
+  padding: 80px 20px;
+  color: #626C4A;
+  font-family: 'RockTwo', serif;
+}
+
+.evento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.evento-grid img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.texto-cima,
+.texto-baixo {
+  padding: 0 20px;
+}
+
+.texto-cima h2,
+.texto-baixo h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.texto-cima p,
+.texto-baixo p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.botao-romantico {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #d4af37;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.botao-romantico:hover {
+  background-color: #b08c2e;
+}
+
+/* Responsivo para celular */
+@media (max-width: 768px) {
+  .evento-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .texto-cima,
+  .texto-baixo {
+    text-align: center;
+  }
+}
