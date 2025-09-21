@@ -1,3 +1,4 @@
+/* Reset e fonte */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +7,11 @@
 
 @font-face {
   font-family: 'RockTwo';
-  src: url('roca-two-thin.ttf') format('truetype'); /* conserva ttf como fallback */
+  src: url('roca-two-thin.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-
 
 body, html {
   font-family: 'RockTwo', serif;
@@ -20,6 +19,7 @@ body, html {
   color: #626C4A;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -27,20 +27,20 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0px 30px;
+  padding: 0 30px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   background: transparent;
   z-index: 1000;
 }
 
 .logo-img {
-  height: 80px; /* ajuste conforme o tamanho desejado */
+  height: 80px;
   width: auto;
-  margin-top: -5px; /* ajuste conforme necessário */
 }
 
+/* Menu padrão */
 nav ul {
   list-style: none;
   display: flex;
@@ -58,67 +58,7 @@ nav ul li a:hover {
   color: #d4af37;
 }
 
-
-/* Hero */
-.hero {
-  min-height: 100vh;
-  background: url('hero.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* alinha no topo */
-  padding-top: 120px; /* espaço para a navbar fixa */
-  text-align: center;
-  background-size: cover;
-  background-position: center top;
-
-
-}
-
-.hero-text {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 0 20px;
-
-  display: flex;
-  flex-direction: column;   /* empilha os itens */
-  align-items: center;      /* centraliza no eixo horizontal */
-  text-align: center;       /* garante centralização do texto */
-  gap: 5px;                /* espaço entre os elementos */
-}
-
-
-
-.hero-text h1 {
- 
-  font-size: 40px;
-  font-weight: 100;
-  color: #626C4A;
-
-}
-
-.hero-text h2 {
- 
-  font-size: 40px;
-  font-weight: 100;
-  color: #626C4A;
-  margin-top: -35px;
-  
-  
-}
-
-.hero-text .date {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #626C4A;
- 
-}
-
-
-/* Responsivo */
+/* Menu sanduíche */
 .menu-toggle {
   display: none;
   font-size: 25px;
@@ -126,10 +66,11 @@ nav ul li a:hover {
   border: none;
   color: rgb(12, 12, 12);
   cursor: pointer;
-  margin-top: -16px;
+  margin-top: 0;
 }
 
-@media (max-width: 768px) {
+/* Exibe menu sanduíche em telas menores */
+@media (max-width: 1024px) {
   .menu-toggle {
     display: block;
   }
@@ -157,10 +98,73 @@ nav ul li a:hover {
   width: 100%;
 }
 
+/* Hero */
+
 .hero {
-    background-position: center top;
-    background-attachment: scroll;
+  min-height: 100vh;
+  background: url('hero.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: scroll;
+  display: block; /* trocado de flex para block */
+  padding-top: 140px; /* espaço para a navbar */
+  text-align: center;
+  position: relative;
+}
+
+/* Texto no topo */
+.hero-text {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-text h1,
+.hero-text h2 {
+  font-size: 40px;
+  font-weight: 100;
+  color: #626C4A;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  margin-top: -10px;
+}
+
+.hero-text .date {
+  font-size: 18px;
+  color: #626C4A;
+  margin-top: 10px;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 1024px) {
+  .hero {
     padding-top: 100px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 32px;
+  }
+
+  .hero-text .date {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    height: 70px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 1080px ) (max-height: 1920px) {
+  .hero {
+    padding-top: 80px;
   }
 
   .hero-text h1,
@@ -169,29 +173,10 @@ nav ul li a:hover {
   }
 
   .hero-text .date {
-    font-size: 16px;
-  }
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .hero-text h1 {
-    font-size: 32px;
-  }
-
-  .hero-text .date {
-    font-size: 16px;
-  }
-
-  .hero {
-    padding-top: 100px;
-    background-position: center top;
-    background-attachment: scroll; /* evita bug em tablets */
-  }
-
-  nav ul {
-    gap: 15px;
+    font-size: 14px;
   }
 
   .logo-img {
-    height: 70px;
+    height: 60px;
   }
 }
